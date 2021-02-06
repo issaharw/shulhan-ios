@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!-- <meta name="format-detection" content="telephone=no" /> 
+	<meta name="msapplication-tap-highlight" content="no" /> -->
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="ShulhanContent.js"></script>
+    <script src="content.js"></script>
+    <script src="scrolling.js"></script>
+    <script src="menu.js"></script>
+    <script src="settings.js"></script>
+	<link rel="stylesheet" href="main.css">
+	<title>שלחן ערוך המקוצר</title>
+</head>
+<body>
+	<div id="main">
+		<div class="header">
+			<img src="settings.png" class="settingsIcon" onclick="showSettingsScreen()"/>
+			<span class="tiklalTitle">שלחן ערוך המקוצר</span>
+			<div id="titleDiv" class="titleDiv"></div>
+		</div>
+		<div id="menu" class="menu"></div>
+		<div id="container" class="container" style="display: none;"></div>
+		<div id="settings" class="settings" style="display: none;">
+			<div class="settingsSection">
+				<span class="settingsLabel">מצב כהה:</span>
+				<div class="settingsValue">
+					<span id="darkModeToggle" onclick="toggleDarkMode('#darkModeToggle')">כבוי</span>
+				</div>
+			</div>
+			<div class="settingsSection">
+				<span class="settingsLabel">צבעים ישנים:<br><span style="font-size: 0.5em;">(דורש הפעלה מחדש)</span></span>
+				<div class="settingsValue">
+					<span id="oldColorsToggle" onclick="toggleOldColors('#oldColorsToggle')">כבוי</span>
+				</div>
+			</div>
+			<div class="settingsSection">
+				<span class="settingsLabel">גודל הטקסט:</span>
+				<div class="settingsValue">
+					<span id="fontSize1" class="fontSizeLink" onclick="setFontSize('#fontSize1', 1)">א</span>
+					<span id="fontSize2" class="fontSizeLink" onclick="setFontSize('#fontSize2', 2)">א</span>
+					<span id="fontSize3" class="fontSizeLink" onclick="setFontSize('#fontSize3', 3)">א</span>
+					<span id="fontSize4" class="fontSizeLink" onclick="setFontSize('#fontSize4', 4)">א</span>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footerButtons">
+				<div onClick='buildMainMenu()' class="footerButton">ראשי</div>
+				<div onClick='goToPrev();' class="footerButton"><img src="right.png"></div>
+				<div onClick='goToNext()' class="footerButton"><img src="left.png"></div>
+				<div onClick='goUp()' class="footerButton"><img src="up.png"></div>
+			</div>
+			<div class="footerText">
+				<hr style="width: 97%;">
+				<div class="hasut">מוקדש להצלחת <span class="hasutName">ר' אליעזר שרעבי ומשפחתו</span> הי"ו</div>
+				<div class="hasut">לעילוי נשמת <span class="hasutName">רונן בן משה</span> ז"ל</div>
+			</div>
+		</div>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>
+
+ 
