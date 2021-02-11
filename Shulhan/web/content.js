@@ -217,7 +217,7 @@ function getElement(je, index) {
 }
 
 function getNumberOfMinors(major) {
-    var majorObject = shulhan.content[major]
+    var majorObject = content.content[major]
     var majorTitle = Object.keys(majorObject)[0]
     return majorObject[majorTitle].length
 }
@@ -248,7 +248,7 @@ function getContent(major, minor) {
         return {
             "error": "Index of major is out of bounds."
         }
-    var majorObject = shulhan.content[major]
+    var majorObject = content.content[major]
     var majorTitle = Object.keys(majorObject)[0]
     var minorObject = majorObject[majorTitle][minor]
     if (!minorObject)
@@ -266,19 +266,25 @@ function getContent(major, minor) {
     }
 }
 
-function createSection(major, minor) {
+function createSection(major, minor, dataPositionsToHighlight = []) {
     var div = $("<div id='content-" + major + "-" + minor + "' major='" + major + "' minor='" + minor + "'>")
     var content = getContent(major, minor).data
     for (var i = 0; i < content.length; i++) {
         var elem = getElement(content[i], i)
         div.append(elem)
+        if (dataPositionsToHighlight.includes(i)) {
+            if(darkMode)
+                elem.setAttribute("style", "background-color: #C5C6C8")
+            else
+                elem.setAttribute("style", "background-color: #F5EAA9")
+        }
     }
     return div
 }
 
 function getMajorTitles() {
     var ret = []
-    for (major of shulhan.content) {
+    for (major of content.content) {
         ret.push(Object.keys(major)[0])
     }
     return ret
@@ -286,7 +292,7 @@ function getMajorTitles() {
 
 function getMinorTitles(major) {
     var ret = []
-    var majorObject = shulhan.content[major]
+    var majorObject = content.content[major]
     var majorTitle = Object.keys(majorObject)[0]
     var minors = majorObject[majorTitle]
     for (minor of minors) {
