@@ -14,6 +14,7 @@
 		3630E6F525CC3CD3008A2965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3630E6F425CC3CD3008A2965 /* Assets.xcassets */; };
 		3630E6F825CC3CD3008A2965 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3630E6F625CC3CD3008A2965 /* LaunchScreen.storyboard */; };
 		36F1E1BD25CF3E1100920CB4 /* web in Resources */ = {isa = PBXBuildFile; fileRef = 36F1E1BC25CF3E1100920CB4 /* web */; };
+		C2B532F02F33FA0C00D619A6 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B532EF2F33FA0C00D619A6 /* BookmarksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3630E6F725CC3CD3008A2965 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3630E6F925CC3CD3008A2965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36F1E1BC25CF3E1100920CB4 /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
+		C2B532EF2F33FA0C00D619A6 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		3630E6EA25CC3CD2008A2965 /* Shulhan */ = {
 			isa = PBXGroup;
 			children = (
+				C2B532EF2F33FA0C00D619A6 /* BookmarksViewController.swift */,
 				3630E6EB25CC3CD2008A2965 /* AppDelegate.swift */,
 				3630E6ED25CC3CD2008A2965 /* SceneDelegate.swift */,
 				3630E6EF25CC3CD2008A2965 /* ViewController.swift */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2B532F02F33FA0C00D619A6 /* BookmarksViewController.swift in Sources */,
 				3630E6F025CC3CD2008A2965 /* ViewController.swift in Sources */,
 				3630E6EC25CC3CD2008A2965 /* AppDelegate.swift in Sources */,
 				3630E6EE25CC3CD2008A2965 /* SceneDelegate.swift in Sources */,
